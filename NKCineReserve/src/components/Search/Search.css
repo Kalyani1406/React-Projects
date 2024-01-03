@@ -1,0 +1,25 @@
+.form-select, .form-control{
+    padding: 0.5rem;
+    border-radius: 0.5rem 0  0 0.5rem;
+    border: none;
+}
+
+.form-select:focus, .form-control:focus{
+    border-color: none;
+    outline: none !important;
+    box-shadow: 0 0 0 0;
+}
+
+.form-select{
+    background-image: url(/public/images/downarrow.png);
+    background-position: right 0.75rem;
+    background-size: 1.3rem;
+
+}
+
+.form-control{
+    border-radius: 0 0.5rem 0.5rem 0;
+}
+
+
+

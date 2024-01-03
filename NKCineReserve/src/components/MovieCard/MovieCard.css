@@ -1,0 +1,35 @@
+.cardContainer {
+    border: 1px solid rgb(57, 144, 162);
+    border-radius: 1rem;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+    max-width: 20rem;
+    height: 27rem;
+    margin: 1rem;
+}
+
+.cardContainer:hover {
+    box-shadow: 0 4px 8px rgba(57, 144, 162, 0.1); 
+}
+
+.cardContainer img {
+    width: 20rem;
+    height: 15rem;
+    max-width: 100%;
+    max-height: auto;
+    border-radius: 1rem 1rem 0 0;
+}
+
+.cardBody {
+    padding: 0.5rem;
+}
+
+.cardTitle{
+    font-size: 1.25rem;
+    margin-bottom: 0.7rem;
+}
+
+.cardText{
+    font-size: 1rem;
+    color: #555;
+}
