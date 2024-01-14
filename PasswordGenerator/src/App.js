@@ -1,6 +1,6 @@
 import './App.css';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback, useRef } from 'react';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCopy } from '@fortawesome/free-solid-svg-icons';
@@ -8,46 +8,61 @@ import { faCopy } from '@fortawesome/free-solid-svg-icons';
 
 
 function App() {
-  let passwordCharacters = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
-  const numberCharacters = ['0','1','2','3','4','5','6','7','8','9'];
-  const specialCharacters = ['!','@','#','$','%','^','&','*','(',')','_','-','+','='];
+  // let passwordCharacters = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
+  // const numberCharacters = ['0','1','2','3','4','5','6','7','8','9'];
+  // const specialCharacters = ['!','@','#','$','%','^','&','*','(',')','_','-','+','='];
   const [length, setLength] = useState(8);
   const [numberAllowed, setNumberAllowed] = useState(false);
-  const [charactersAllowed, setCharactersAllowed] = useState(false);
+  const [specialCharactersAllowed, setSpecialCharactersAllowed] = useState(false);
   const [password, setPassword] = useState('');
-  
-  useEffect(() => {
-    generatePassword();
-  }, [length, numberAllowed, charactersAllowed]);
 
-  const generatePassword = () => {
-    if (numberAllowed) {
-      passwordCharacters = passwordCharacters.concat(numberCharacters);
-    }
+  const passwordRef = useRef(null);
 
-    if (charactersAllowed) {
-      passwordCharacters = passwordCharacters.concat(specialCharacters);
-    }
+  // const generatePassword = () => {
+    
+  //   if (numberAllowed) {
+  //     passwordCharacters = passwordCharacters.concat(numberCharacters);
+  //   }
 
+  //   if (specialCharactersAllowed) {
+  //     passwordCharacters = passwordCharacters.concat(specialCharacters);
+  //   }
+
+  //   let generatedPassword = "";
+
+  //   for(let i = 0; i < length; i++) {
+  //     generatedPassword +=passwordCharacters[Math.floor(Math.random() *  passwordCharacters.length)];
+  //   }
+
+  //   setPassword(generatedPassword);
+  //   console.log(generatedPassword);
+  // }
+
+
+  const generatePassword = useCallback(() => {
     let generatedPassword = "";
+    let str = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+
+    if(numberAllowed) str += "0123456789";
+    if(specialCharactersAllowed) str += "!@#$%^&*()_-+=";
 
     for(let i = 0; i < length; i++){
-      generatedPassword +=passwordCharacters[Math.floor(Math.random() *  passwordCharacters.length)];
+      const char = Math.floor(Math.random() * str.length);
+      generatedPassword += str.charAt(char);
     }
 
     setPassword(generatedPassword);
-    console.log(generatedPassword);
-  }
+    
+  },[length, numberAllowed, specialCharactersAllowed])
 
   const copyToClipboard = () => {
-    navigator.clipboard.writeText(password)
-    .then(() => {
-      console.log('Password copied to clipboard');
-    })
-    .catch((err) => {
-      console.error('Unable to copy password to clipboard', err);
-    });
+    window.navigator.clipboard.writeText(password);
+    passwordRef.current?.select();
   };
+
+  useEffect(() => {
+    generatePassword()
+  }, [length, numberAllowed, specialCharactersAllowed]);
 
 
   return (
@@ -60,6 +75,8 @@ function App() {
           className='outline-none w-full py-1 px-3' 
           id="password"
           placeholder='Password'
+          readOnly
+          ref={passwordRef}
         />
         <button 
           onClick={copyToClipboard}
@@ -96,9 +113,9 @@ function App() {
         <div className="flex items-center gap-x-1">
           <input 
             type="checkbox"
-            checked={charactersAllowed}
+            checked={specialCharactersAllowed}
             onChange={ () => {
-              setCharactersAllowed((prev) => !prev)
+              setSpecialCharactersAllowed((prev) => !prev)
             }}
             name="character"
             id="" 
