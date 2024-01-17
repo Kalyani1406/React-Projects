@@ -16,27 +16,30 @@ function App() {
   const currencyInfo = useCurrencyInfo(from);
   const options = Object.keys(currencyInfo);
 
-  const convert = () => {
-    setConvertedAmount( amount * currencyInfo[to]);
+  const swap = (event) => {
+    setFrom(to)
+    setTo(from)
+    setConvertedAmount(amount)
+    setAmount(convertedAmount)
+    event.preventDefault();
   }
 
-  const swap = () => {
-    setFrom(to);
-    setTo(from);
-    setConvertedAmount(amount);
-    setAmount(convertedAmount);
+  const convert = () => {
+    setConvertedAmount(amount * currencyInfo[to]);
   }
+
 
   return (
-    <div className='currencyConverterContainer'>
-      <div className="inputContent">
+    <div className="currencyConverterContainer">
+      <div className="currencyConverterContent">
         <h1>Currency Converter</h1>
         <form onSubmit = {(e) => {
           e.preventDefault();
           convert();
         }}>
           <div className="formContent">
-            <Inputbox label="From" 
+            <Inputbox 
+              label="From" 
               amount={amount} 
               currencyOptions={options} 
               onCurrencyChange={(currency) => setFrom(currency)}
@@ -51,8 +54,13 @@ function App() {
             </button>
             <Inputbox  
               label="To"
+              currencyOptions={options} 
+              amount={convertedAmount} 
+              onCurrencyChange={(currency) => setTo(currency)}
+              selectedCurrency={to}
+              amountDisabled
             />
-            <button className='convertBtn'>Convert</button>
+            <button className='convertBtn'>Convert {from.toUpperCase()} to {to.toUpperCase()}</button>
           </div> 
         </form>
       </div>
