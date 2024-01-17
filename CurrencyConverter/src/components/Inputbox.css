@@ -35,12 +35,15 @@ input,select {
 
 select {
   background-color: #becfce;
+  outline: none;
 }
 
 input{
   outline: none;
   background: transparent;
 }
+
+
 
 
 
