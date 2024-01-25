@@ -24,8 +24,9 @@ function App() {
     event.preventDefault();
   }
 
-  const convert = () => {
+  const convert = (event) => {
     setConvertedAmount(amount * currencyInfo[to]);
+    event.preventDefault();
   }
 
 
@@ -33,10 +34,7 @@ function App() {
     <div className="currencyConverterContainer">
       <div className="currencyConverterContent">
         <h1>Currency Converter</h1>
-        <form onSubmit = {(e) => {
-          e.preventDefault();
-          convert();
-        }}>
+        <form>
           <div className="formContent">
             <Inputbox 
               label="From" 
@@ -60,7 +58,7 @@ function App() {
               selectedCurrency={to}
               amountDisabled
             />
-            <button className='convertBtn'>Convert {from.toUpperCase()} to {to.toUpperCase()}</button>
+            <button className='convertBtn' onClick={convert}>Convert {from.toUpperCase()} to {to.toUpperCase()}</button>
           </div> 
         </form>
       </div>
