@@ -1,0 +1,54 @@
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+
+.container-fluid, .row{
+    --bs-gutter-x: 0;
+}
+
+.bg-light-purple {
+    background-color: #cdbfe3;
+}
+ 
+.bg-dark-purple{
+    background-color: #6f5499;
+}
+
+.btn{
+    padding: 0.7rem 1.5rem;
+    font-size: 1.3rem;
+    cursor:pointer;
+}
+
+.btn-color{
+    background-color: #6f5499;
+}
+
+.btn-color:hover{
+    background-color: #8864c1;
+}
+
+.text-purple{
+    color: #6f5499 !important;
+}
+
+.text-bold{
+    font-weight: bold;
+}
+
+.text{
+    font-size: 1.2rem;
+}
+
+.form-control {
+    max-width: 100%;
+}
+

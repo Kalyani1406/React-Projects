@@ -1,0 +1,18 @@
+.reg-container{
+    height: 100vh;
+}
+
+.reg-container .form-content{
+    border: 1px solid #6f5499;
+    padding: 2rem;
+    border-radius: 1rem;
+    width: 35rem;
+    height: 45rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: -70px;
+    background-color: #cdbfe3;
+}

@@ -1,0 +1,35 @@
+.login-container{
+    height: 100vh;
+}
+
+.upper-image{
+    z-index: 1;
+}
+
+form{
+    width: 100%;
+}
+
+.login-container .form-content{
+    border: 1px solid #6f5499;
+    padding: 2rem;
+    border-radius: 1rem;
+    width: 35rem;
+    height: 34rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: -70px;
+    background-color: #cdbfe3;
+}
+
+.form-control{
+    max-width: 100%;
+}
+
+
+#checkbox{
+    margin-right: 0.25rem;
+}

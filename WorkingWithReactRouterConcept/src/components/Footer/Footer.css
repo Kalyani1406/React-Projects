@@ -1,0 +1,26 @@
+
+
+.subIndexLinks{
+    text-decoration: none;
+    font-size: 1.3rem;
+}
+
+.input-group{
+    width: 30rem;
+}
+
+.form-control{
+    border: 1px solid #6f5499;
+    max-width: 20rem;
+    color: white;
+}
+
+hr{
+    margin: 2rem 0;
+    border: 1px solid white;
+    width: 50%;
+}
+
+.icons{
+    font-size: 2rem;
+}

@@ -1,0 +1,90 @@
+[{
+    "user": {
+      "email": "alice@example.com",
+      "name": "Alice Johnson"
+    },
+    "review": {
+      "star_rating": 5.0,
+      "text": "Outstanding product! It has greatly improved my daily routine. Highly recommended.",
+      "photo_url": "https://www.usatoday.com/gcdn/presto/2019/01/24/USAT/e7b1a151-1fde-4bfa-b494-43395bd61330-USP_News__Alice_Marie_Johnson.JPG?width=660&height=440&fit=crop&format=pjpg&auto=webp"
+    }
+  },
+
+  {
+    "user": {
+      "email": "bob@example.com",
+      "name": "Bob Smith"
+    },
+    "review": {
+      "star_rating": 4.0,
+      "text": "Good value for the money. It does the job well. Will consider buying again.",
+      "photo_url": "https://images.squarespace-cdn.com/content/v1/55566d6ee4b0a3a2a1a76e5e/1550617218635-QEITDBOOSM9PC5NOW0MS/Bob-Smith.jpg"
+    }
+  },
+  {
+    "user": {
+      "email": "carol@example.com",
+      "name": "Carol Davis"
+    },
+    "review": {
+      "star_rating": 3.5,
+      "text": "Decent product, but there is room for improvement. Average overall.",
+      "photo_url": "https://media.licdn.com/dms/image/C5603AQFkp6FTMhVcOw/profile-displayphoto-shrink_800_800/0/1554924469058?e=2147483647&v=beta&t=226sbgQ2g3QX6L6id-GKXqc1NFMTlWQMQrdEyXCvyK8"
+    }
+  },
+  {
+    "user": {
+      "email": "david@example.com",
+      "name": "David Miller"
+    },
+    "review": {
+      "star_rating": 4.8,
+      "text": "Impressive quality and functionality. I am very satisfied with my purchase.",
+      "photo_url": "https://cdn.wisden.com/wp-content/uploads/2017/11/GettyImages-690014708-e1520010225525.jpg"
+    }
+  },
+  {
+    "user": {
+      "email": "emma@example.com",
+      "name": "Emma White"
+    },
+    "review": {
+      "star_rating": 3.0,
+      "text": "Not bad, but it could be better. The user interface needs some refinement.",
+      "photo_url": "https://images.squarespace-cdn.com/content/v1/517d7460e4b08478234cc88f/1670523323842-5MMC9QSH8UI5P19QVTQU/Press_horizontal+copy1.jpg"
+    }
+  },
+  {
+    "user": {
+      "email": "nayan@example.com",
+      "name": "Nayanathara"
+    },
+    "review": {
+      "star_rating": 5.0,
+      "text": "Outstanding product! It has greatly improved my daily routine. Highly recommended.",
+      "photo_url": "https://media.assettype.com/tnm%2Fimport%2Fsites%2Fdefault%2Ffiles%2FNayanthara_RowdyPictures_Screengrab_221222_1200.jpg?auto=format%2Ccompress&fit=max&w=1200"
+    }
+  },
+
+  {
+    "user": {
+      "email": "soundarya@example.com",
+      "name": "Soundarya"
+    },
+    "review": {
+      "star_rating": 4.0,
+      "text": "Good value for the money. It does the job well. Will consider buying again.",
+      "photo_url": "https://www.pinkvilla.com/pics/480x270/soundaryas_death_anniversary_tamil_director_had_revealed_actress_was_pregnant_and_had_decided_to_quit_acting_202209.jpg"
+    }
+  },
+  {
+    "user": {
+      "email": "jagapathi@example.com",
+      "name": "Jagapathi"
+    },
+    "review": {
+      "star_rating": 2.5,
+      "text": "Decent product, but there is room for improvement. Average overall.",
+      "photo_url": "https://m.media-amazon.com/images/M/MV5BZTA1M2U3NmYtYjgyZC00MzBjLTk0MmMtNDdlOTE0Y2ZiNzQ0XkEyXkFqcGdeQXVyMjkxNzQ1NDI@._V1_FMjpg_UX1000_.jpg"
+    }
+  }]
